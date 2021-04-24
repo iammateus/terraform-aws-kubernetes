@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+    name: brincadeirinha
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: nginx-example-service
+    namespace: brincadeirinha
+    labels:
+        app: nginx-example
+spec:
+    type: LoadBalancer
+    selector:
+        app: nginx-example
+    ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: nginx-example
+    namespace: brincadeirinha
+    labels:
+        app: nginx-example
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            app: nginx-example
+    template:
+        metadata:
+            labels:
+                app: nginx-example
+        spec:
+            affinity:
+                nodeAffinity:
+                    requiredDuringSchedulingIgnoredDuringExecution:
+                        nodeSelectorTerms:
+                            - matchExpressions:
+                                  - key: beta.kubernetes.io/arch
+                                    operator: In
+                                    values:
+                                        - amd64
+                                        - arm64
+            containers:
+                - name: nginx
+                  image: public.ecr.aws/z9d2n7e1/nginx:1.19.5
+                  ports:
+                      - containerPort: 80
