@@ -1,4 +1,4 @@
-# terraform-kubernetes-aws
+# Terraform, Kubernetes & AWS
 
 This repository contains an example of deploying and managing a [Kubernetes](https://kubernetes.io/) cluster via [Amazon EKS](https://aws.amazon.com/eks) using [Terraform](https://www.terraform.io/), an open-source infrastructure as code software tool. 
 
