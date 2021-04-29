@@ -15,3 +15,7 @@ The provisioned Kubernetes cluster has sample resources that offer an IP-accessi
 - An  AWS account with the IAM permissions listed on the  [EKS module documentation](https://github.com/terraform-aws-modules/terraform-aws-eks/blob/master/docs/iam-permissions.md)
 - A configured [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 - [AWS IAM Authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)
+
+## Requirements
+
+[MIT](https://github.com/iammateus/terraform-kubernetes-aws/blob/main/LICENSE)
