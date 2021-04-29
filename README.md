@@ -18,7 +18,7 @@ The provisioned Kubernetes cluster has sample resources that offer an IP-accessi
 
 ## Usage
 
-Use the Azure CLI to authenticate to Microsoft Azure.
+The requirements must be met for the command below to work.
 
     $ terraform apply
 
