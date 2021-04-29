@@ -16,6 +16,12 @@ The provisioned Kubernetes cluster has sample resources that offer an IP-accessi
 - A configured [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 - [AWS IAM Authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)
 
+## Usage
+
+Use the Azure CLI to authenticate to Microsoft Azure.
+
+    $ terraform apply
+
 ## License
 
 [MIT](https://github.com/iammateus/terraform-kubernetes-aws/blob/main/LICENSE)
