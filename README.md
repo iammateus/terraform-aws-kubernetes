@@ -21,17 +21,17 @@ The provisioned Kubernetes cluster has sample resources that offer an IP-accessi
 
 The requirements must be met for the command below to work.
 
-	# Go to terraform directory
+    # Go to terraform directory
     $ cd terraform
     
     # Apply all changes to your account
     $ terraform apply
 	
-	# After Terraform finishes applying the changes, you need to configure your `kubectl`.
+    # After Terraform finishes applying the changes, you need to configure your kubectl.
     $ aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
    
-	# Use kunectl to apply the example.yaml manifest and create the sample resources
-	$ kubectl apply -f ../k8s/example.yaml
+    # Use kunectl to apply the example.yaml manifest and create the sample resources
+    $ kubectl apply -f ../k8s/example.yaml
 
 ## License
 
