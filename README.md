@@ -30,8 +30,8 @@ The requirements must be met for the command below to work.
     # After Terraform finishes applying the changes, you need to configure your kubectl.
     $ aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
    
-    # Use kunectl to apply the example.yaml manifest and create the sample resources
-    $ kubectl apply -f ../k8s/example.yaml
+    # Use kubectl to see all resources of the created namespace
+    $ kubectl get all -n brincadeirinha
 
 ## License
 
