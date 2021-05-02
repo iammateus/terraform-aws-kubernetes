@@ -21,16 +21,16 @@ The provisioned Kubernetes cluster has sample resources that offer an IP-accessi
 
 The requirements must be met for the command below to work.
 
-    # Go to terraform directory
+    # Change current directory to "terraform"
     $ cd terraform
     
-    # Apply all changes to your account
+    # Apply all changes to your AWS account
     $ terraform apply
 	
     # After Terraform finishes applying the changes, you need to configure your kubectl.
     $ aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
    
-    # Use kubectl to see all resources of the created namespace
+    # Use kubectl to list all resources of the created namespace
     $ kubectl get all -n brincadeirinha
 
 ## License
