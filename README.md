@@ -19,7 +19,7 @@ The provisioned Kubernetes cluster has sample resources that offer an IP-accessi
 
 ## Usage
 
-The requirements must be met for the command below to work.
+The requirements must be met for the commands below to work.
 
     # Change current directory to "terraform"
     $ cd terraform
